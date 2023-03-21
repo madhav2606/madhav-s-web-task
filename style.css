@@ -1,0 +1,545 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 4rem 0 0 0;
+    font-family: "Kanit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: min(10vw, 4rem);
+    line-height: 4rem;
+    margin: 0;
+    margin-top: calc(40vh - 6rem);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.6rem;
+    margin: 0;
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin: 0;
+
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin: 0;
+}
+
+h5 {
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin: 0;
+
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4rem;
+    background-color: blueviolet;
+    /* background-color: red; */
+    color: white;
+    z-index: 500;
+    border-bottom: solid white 0.2rem;
+}
+
+.logobox {
+    display: flex;
+    background: #8a2be2;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+}
+
+.logobox > .logo {
+    font-family: serif;
+    font-size: 2.75rem;
+    height: 4rem;
+    width: 4rem;
+}
+
+/* The animation code */
+@keyframes logo-anim1 {
+    from {
+        top: -0.2rem;
+        left: 0.8rem;
+        transform: scale(1.1);
+    } to {
+        top: 0.25rem;
+        left: 1.25rem;
+        transform: scale(1);
+    }
+}
+
+@keyframes logo-anim2 {
+    from {
+        top: 0.7rem;
+        left: 1.7rem;
+        transform: scale(0.9);
+        opacity: 0.7;
+    } to {
+        top: 0.25rem;
+        left: 1.25rem;
+        transform: scale(1);
+        opacity: 0.9;
+    }
+}
+
+.logobox > .logo > span:nth-child(1) {
+    position: absolute;
+    color: white;
+    z-index: 6;
+    animation: logo-anim1 0.75s cubic-bezier(0.8,0.2,1,1) infinite alternate;
+}
+
+.logobox > .logo > span:nth-child(2) {
+    position: absolute;
+    text-shadow: 0.1rem 0.1rem 0 blueviolet;
+    z-index: 5;
+    animation: logo-anim2 0.75s cubic-bezier(0.8,0.2,1,1) infinite alternate;
+    color: black;
+}
+
+#navlinks {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    background-color: blueviolet;
+    z-index: 1000;
+
+}
+
+.section-link {
+    position: relative;
+    top: -4rem;
+}
+
+#navlinks a {
+    text-decoration: none;
+    color: white;
+    padding: 0 1rem;
+    height: 4rem;
+    line-height: 4rem;
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
+    display: block;
+    background-color: #fff0;
+    transition: all 0.3s;
+
+}
+
+#navlinks a:hover {
+    background-color: #fff2;
+    transition: all 0.3s;
+}
+
+html {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+html::-webkit-scrollbar, #homepage::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+#homepage {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    width: 100%;
+    background-image: url("sky.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    outline: none;
+}
+
+#titleText {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+#homepage h1, #homepage h2{
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+#homepage h2 {
+    font-weight: 200;
+}
+
+#homepage #mountain-img {
+    position: relative;
+    bottom: 0;
+    object-fit: cover;
+    height: 140vh;
+    width: 100%;
+    margin-bottom: -1rem;
+    padding: 0;
+    z-index: 100;
+
+}
+
+#about-us {
+    width: calc(100% - 2rem);
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem 2rem 1rem;
+}
+
+#about-us h2 {
+    padding: 2rem 0 1rem 0;
+}
+
+#about-us span {
+    color: #334;
+}
+
+#about-us #sneekpeek td:nth-child(1){
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: right;
+}
+
+#about-us #sneekpeek td:nth-child(2){
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    padding-left: 1rem;
+}
+
+#tours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 1rem 1rem;
+    border-top: solid lightgrey 0.2rem;
+}
+
+
+#cardHolder {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0.1rem 0.1rem 1rem #0002;
+    min-width: 10rem;
+    max-width: 20rem;
+    margin: 1rem;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+
+.card .tourTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.1rem;
+}
+
+.card span {
+    font-size: 1rem;
+    line-height: 1.2rem !important;
+    height: 3.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 300;
+    display: block;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1.5;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.card a {
+    text-decoration: none;
+    width: 100%;
+    height: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 0.2rem solid blueviolet;
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: white;
+    transition: all 0.5s;
+    background: #8a2be2ff;
+}
+
+.card a:hover {
+    background: #8a2be222;
+    color: black;
+    transition: all 0.5s;
+}
+
+.card a img{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0 1rem;
+    transition: all 0.5s;
+    filter: invert(1);
+}
+
+.card a:hover img{
+    filter: none;
+    transform: translateX(2rem);
+    transition: all 0.5s;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+#contact {
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8a2be2;
+    padding: 2rem 1rem;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: min(20rem, 100%);
+
+}
+
+#contact form label {
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 500;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+#contact form input, #contact form textarea {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    color: #224;
+    font-size: 1.25rem;
+    height: 1.7rem;
+    line-height: 1.5rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    width: calc(100% - 1rem);
+    background: white;
+}
+
+#contact form input:focus, #contact form textarea:focus {
+    outline: solid 0.2rem #4b0091;
+}
+
+#contact form textarea {
+    resize: vertical;
+    min-height: 4.7rem;
+    height: 4.7rem;
+}
+
+#contact form input[type=submit] {
+    margin-top: 2rem;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    color: blueviolet;
+    border-radius: 2rem;
+    height: 2rem;
+    width: min-content;
+    padding: 0.1rem 2rem;
+    border: solid white 0.2rem;
+}
+
+#contact form input[type=submit]:hover {
+    background: #9679b1;
+    color: white;
+}
+
+#navlinks .logobox {
+    display: none;
+}
+
+#navbar #hamburger {
+    height: 4rem;
+    width: 4rem;
+    background: none;
+    background-image: url(menu.svg);
+    background-size: 50%;
+    display: none;
+}
+
+#footer {
+    background: #1e088d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: white;
+    padding: 2rem 0 1rem 0 ;
+}
+
+#footer .twitter {
+    background-image: url(twitter.svg);
+}
+
+#footer .youtube {
+    background-image: url(youtube.svg);
+}
+
+#footer .facebook {
+    background-image: url(facebook.svg);
+}
+
+#footer .instagram {
+    background-image: url(instagram.svg);
+}
+
+#footer .whatsapp {
+    background-image: url(whatsapp.svg);
+}
+
+#footer #links, #socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#footer #links a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    margin: 0 0.5rem;
+}
+
+#footer #links a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+#socials {
+    padding: 1rem 0;
+}
+
+#socials a {
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    margin: 0.5rem;
+    background-size: 100%;
+    transition: all 0.2s;
+}
+
+#socials a:hover {
+    transform: scale(1.2);
+    transition: all 0.2s;
+}
+
+@media only screen and (max-width: 680px) {
+
+    #navbar {
+        justify-content: start;
+    }
+
+    #navlinks {
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        left: -25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        box-shadow: 0.5rem 0 4rem #0000, 0 0 20vw 0 #0000;
+        transition: all 0.3s;
+    }
+
+    #navbar #hamburger {
+        display: block;
+        filter: invert(1);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+
+    .active#navlinks {
+        left: 0;
+        box-shadow: 0.5rem 0 4rem #000f, 0 0 20vw 100vw #0004;
+        transition: all 0.3s;
+    }
+
+    #navlinks .logobox {
+        display: flex;
+        padding-right: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    #navlinks a {
+        width: calc(100% - 2rem);
+        padding: 0 0rem 0 2rem;
+    }
+
+    .logobox {
+        transform: translateX(0rem);
+    }
+
+}
